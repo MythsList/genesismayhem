@@ -16,12 +16,12 @@
       image-rendering: pixelated;
     }
 
-    h1::after {
-      content: "Error " var(--error);
+    h1, .errormsg {
       font-size: 60px;
       margin-bottom: 0.2em;
       color: #FFFFFF;
       text-shadow: -1px -1px #000, 1px -1px #000, -1px 1px #000, 1px 1px #000;
+      content: "Error " var(--error);
     }
 
     em {
@@ -39,7 +39,7 @@
 <body>
   <center>
     <br>
-    <h1 id="error"></h1>
+    <h1 class="errormsg">Error 404</h1>
     <em><strong>No way? No way!</em>
     <br>
     <br>
