@@ -1,13 +1,5 @@
 <head>
   <style>
-    :root {
-      --error: "404"; 
-    }
-  </style>
-
-  <script src="https://mythslist.github.io/genesismayhem/404.js"></script>
-
-  <style>
     body {
       background-image: url("https://mythslist.github.io/genesismayhem/assets/images/background.png");
       background-position: center;
@@ -16,12 +8,11 @@
       image-rendering: pixelated;
     }
 
-    h1, .errormsg {
+    h1 {
       font-size: 60px;
       margin-bottom: 0.2em;
       color: #FFFFFF;
       text-shadow: -1px -1px #000, 1px -1px #000, -1px 1px #000, 1px 1px #000;
-      content: "Error " var(--error);
     }
 
     em {
@@ -31,6 +22,19 @@
       text-shadow: -1px -1px #000, 1px -1px #000, -1px 1px #000, 1px 1px #000;
     }
   </style>
+
+  <script>
+    const elements = document.getElementsByClassName("errormsg");
+    const errors = ["404", "134"];
+    const randomnum = Math.floor(Math.random() * 26) + 1;
+
+    if (randomnum >= 2) {
+        elements.innerHTML = "Error" + errors[1];
+    }  
+    else {
+        elements.innerHTML = "Error" + errors[0];
+    }
+  </script>
 
   <title>Genesis Mayhem | NO WAY!</title>
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
