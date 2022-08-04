@@ -1,6 +1,8 @@
+<html>
 <head>
   <style>
     body {
+      background-color: black;
       background-image: url("https://mythslist.github.io/genesismayhem/assets/images/background.png");
       background-position: center;
       background-repeat: no-repeat;
@@ -17,38 +19,38 @@
 
     em {
       font-size: 20px;
+      font-weight: bold;
       font-family: arial;
       color: #FFFFFF;
       text-shadow: -1px -1px #000, 1px -1px #000, -1px 1px #000, 1px 1px #000;
     }
   </style>
 
-  <script>
-    const elements = document.getElementsByClassName("errormsg");
-    const errors = ["404", "134"];
-    const randomnum = Math.floor(Math.random() * 26) + 1;
-
-    if (randomnum >= 2) {
-        elements.innerHTML = "Error" + errors[1];
-    }  
-    else {
-        elements.innerHTML = "Error" + errors[0];
-    }
-  </script>
-
-  <title>Genesis Mayhem | NO WAY!</title>
+  <title>Genesis Mayhem | Error 404</title>
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 </head>
 
 <body>
   <center>
     <br>
-    <h1 class="errormsg">Error 404</h1>
-    <em><strong>No way? No way!</em>
+    <h1 id="errormsg">Error 404</h1>
+    <em id="noway">This page doesn't exist.</em>
     <br>
     <br>
-    <audio title="NO WAY!" controls loop="true" preload="auto" src="https://mythslist.github.io/genesismayhem/assets/audios/NO_WAY.ogg"><center>
+    <audio id="audio" title="NO WAY!" loop="true" preload="auto" src="https://mythslist.github.io/genesismayhem/assets/audios/NO_WAY.ogg">
       Audio format not supported.
     </audio>
+
+    <script>
+      const randomnum = Math.floor(Math.random() * 26) + 1;
+  
+      if (randomnum >= 25 || randomnum <= 1) {
+        document.title = "Genesis Mayhem | NO WAY!";
+        document.getElementById("errormsg").innerHTML = "Error 134";
+        document.getElementById("noway").innerHTML = "No way? No way!";
+        document.getElementById("audio").controls = "true";
+      }  
+    </script>
   </center>
 </body>
+</html>
