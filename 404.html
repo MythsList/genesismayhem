@@ -1,33 +1,9 @@
 <html>
 <head>
-  <style>
-    body {
-      background-color: black;
-      background-image: url("https://mythslist.github.io/genesismayhem/assets/images/background.png");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      image-rendering: pixelated;
-    }
-
-    h1 {
-      font-size: 60px;
-      margin-bottom: 0.2em;
-      color: #FFFFFF;
-      text-shadow: -1px -1px #000, 1px -1px #000, -1px 1px #000, 1px 1px #000;
-    }
-
-    em {
-      font-size: 20px;
-      font-weight: bold;
-      font-family: arial;
-      color: #FFFFFF;
-      text-shadow: -1px -1px #000, 1px -1px #000, -1px 1px #000, 1px 1px #000;
-    }
-  </style>
-
   <title>Genesis Mayhem | Error 404</title>
-  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/x-icon" href="favicon16.ico" sizes="16x16">
+  <link rel="icon" type="image/x-icon" href="favicon32.ico" sizes="32x32">
+  <link rel="stylesheet" type="text/css" href="404.css">
 </head>
 
 <body>
@@ -37,20 +13,14 @@
     <em id="noway">This page doesn't exist.</em>
     <br>
     <br>
-    <audio id="audio" title="NO WAY!" loop="true" preload="auto" src="https://mythslist.github.io/genesismayhem/assets/audios/NO_WAY.ogg">
+    <audio id="audio" title="NO WAY!" loop="true" preload="auto" src="assets/audios/NO_WAY.ogg">
       Audio format not supported.
     </audio>
+    <br>
+    <p id="counter"></p>
+    <footer id="copyright">&copy; 2022 Genesis Team | Sonic's Genesis Mayhem</footer>
 
-    <script>
-      const randomnum = Math.floor(Math.random() * 26) + 1;
-  
-      if (randomnum >= 25 || randomnum <= 1) {
-        document.title = "Genesis Mayhem | NO WAY!";
-        document.getElementById("errormsg").innerHTML = "Error 134";
-        document.getElementById("noway").innerHTML = "No way? No way!";
-        document.getElementById("audio").controls = "true";
-      }  
-    </script>
+    <script src="404.js"></script>
   </center>
 </body>
 </html>
