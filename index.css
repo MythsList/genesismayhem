@@ -1,10 +1,8 @@
 body {
     overflow: auto;
     background-color: black;
-    background-image: url("assets/images/background.png");
+    background-image: url("assets/images/background2.png");
     background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     image-rendering: pixelated;
 }
 
@@ -15,17 +13,23 @@ h1 {
     text-shadow: -1px -1px #000, 1px -1px #000, -1px 1px #000, 1px 1px #000;
 }
 
-em {
-    font-size: 20px;
-    font-weight: bold;
-    font-family: arial;
+footer {
+    margin-top: 1em;
+    font-size: 12px;
     color: #FFFFFF;
     text-shadow: -1px -1px #000, 1px -1px #000, -1px 1px #000, 1px 1px #000;
 }
 
-footer {
-    margin-top: -1em;
-    font-size: 12px;
-    color: #FFFFFF;
+.linktext {
+    font-size: 42px;
+    margin-bottom: -0.5em;
+    font-weight: bold;
+    font-family: arial;
+    color:yellow;
     text-shadow: -1px -1px #000, 1px -1px #000, -1px 1px #000, 1px 1px #000;
+    cursor: pointer;
+}
+
+u {
+    text-decoration-color: yellow;
 }
