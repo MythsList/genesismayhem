@@ -6,4 +6,10 @@ if (randomnum >= 25 || randomnum <= 1) {
     document.getElementById("noway").innerHTML = "No way? No way!";
     document.getElementById("audio").controls = "true";
     document.getElementById("copyright").style.marginTop = "0.5em";
+    document.getElementById("back").style.marginTop = "0.5em";
+    document.getElementById("back").style.marginBottom = "-0.6em";
 }  
+
+document.querySelector("#back").onclick = () => {
+    location.href = "index.html"
+}
